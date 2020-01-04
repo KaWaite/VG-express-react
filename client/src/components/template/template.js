@@ -1,20 +1,20 @@
 import React, { Component } from "react";
-import "./template.css";
+import "./Template.css";
 
-export default class Customers extends Component {
+export default class Template extends Component {
   constructor() {
     super();
     this.state = {
-      customers: []
+      articles: []
     };
   }
 
   componentDidMount() {
-    fetch("/api/customers")
+    fetch("/api/articles")
       .then(res => res.json())
-      .then(customers =>
-        this.setState({ customers }, () =>
-          console.log("Customers fetched..", customers)
+      .then(articles =>
+        this.setState({ articles }, () =>
+          console.log("Articles fetched..", articles)
         )
       );
   }
@@ -24,9 +24,9 @@ export default class Customers extends Component {
       <div>
         <h2>Customers</h2>
         <ul>
-          {this.state.customers.map(customer => (
-            <li key={customer.id}>
-              {customer.firstName} {customer.lastName}
+          {this.state.articles.map(article => (
+            <li key={article.id}>
+              {article.title} {article.author}
             </li>
           ))}
         </ul>

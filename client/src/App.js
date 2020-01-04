@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 
 import NavBar from "./components/NavBar.js";
+import Template from "./components/template/Template";
 import Articles from "./components/Articles";
 import UpcomingGames from "./components/UpcomingGames";
 import Middle from "./components/Middle";
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <h1>Hello world</h1>
+      <Template />
       <div className="main">
         <UpcomingGames />
         <Articles />
@@ -21,18 +22,6 @@ function App() {
         {/* <Newsletter className="newsletter" /> */}
       </div>
       <Footer />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>You are beautiful.</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
     </div>
   );
 }
