@@ -8,6 +8,9 @@ import { makeStyles } from "@material-ui/core/styles";
 // import SearchIcon from "@material-ui/icons/Search";
 import MoreIcon from "@material-ui/icons/MoreVert";
 
+// import Link for footer links
+import { Link } from "react-router-dom";
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
@@ -23,7 +26,9 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1,
-    alignSelf: "flex-end"
+    alignSelf: "flex-end",
+    color: "white",
+    textDecoration: "none"
   },
   appbar: {
     backgroundColor: "rgba(199,201,123,1)",
@@ -47,10 +52,11 @@ export default function Footer() {
           >
             <MenuIcon />
           </IconButton> */}
-          <Typography className={classes.title} variant="h5" noWrap>
-            Contact Us
-          </Typography>
-
+          <Link to="/about" className={classes.title}>
+            <Typography variant="h5" noWrap>
+              About
+            </Typography>
+          </Link>
           <IconButton
             aria-label="display more actions"
             edge="end"
