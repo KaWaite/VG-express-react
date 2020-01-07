@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar.js";
 import Template from "./components/template/Template";
 import Main from "./components/Main";
-// import Newsletter from "./Components/Newsletter";
 import Footer from "./components/Footer";
 
 // Experimental components

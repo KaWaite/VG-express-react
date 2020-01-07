@@ -55,6 +55,32 @@ app.get("/api/games", (req, res) => {
         genre: "RPG",
         score: "8.8"
       }
+    ],
+    XboxOne: [
+      {
+        id: 1,
+        title: "Gears of War",
+        releaseDate: "2011",
+        developer: "IDontKnow",
+        genre: "action",
+        score: "9.7"
+      },
+      {
+        id: 2,
+        title: "Forza",
+        releaseDate: "201234",
+        developer: "Level 3434",
+        genre: "sci-fi",
+        score: "9"
+      },
+      {
+        id: 3,
+        title: "Halo",
+        releaseDate: "2002",
+        developer: "XboxDevTeam",
+        genre: "Shooter",
+        score: "6.5"
+      }
     ]
   };
 
