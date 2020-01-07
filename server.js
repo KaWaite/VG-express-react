@@ -32,7 +32,7 @@ app.get("/api/games", (req, res) => {
     ],
     Switch: [
       {
-        id: 1,
+        id: 4,
         title: "Mario",
         releaseDate: "2011",
         developer: "Nintendo",
@@ -40,7 +40,7 @@ app.get("/api/games", (req, res) => {
         score: "9.7"
       },
       {
-        id: 2,
+        id: 5,
         title: "Pokemon",
         releaseDate: "2013",
         developer: "Level 1",
@@ -48,7 +48,7 @@ app.get("/api/games", (req, res) => {
         score: "9.4"
       },
       {
-        id: 3,
+        id: 6,
         title: "Dragon Quest",
         releaseDate: "1993",
         developer: "SquareEnix",
@@ -58,7 +58,7 @@ app.get("/api/games", (req, res) => {
     ],
     XboxOne: [
       {
-        id: 1,
+        id: 7,
         title: "Gears of War",
         releaseDate: "2011",
         developer: "IDontKnow",
@@ -66,7 +66,7 @@ app.get("/api/games", (req, res) => {
         score: "9.7"
       },
       {
-        id: 2,
+        id: 8,
         title: "Forza",
         releaseDate: "201234",
         developer: "Level 3434",
@@ -74,7 +74,7 @@ app.get("/api/games", (req, res) => {
         score: "9"
       },
       {
-        id: 3,
+        id: 9,
         title: "Halo",
         releaseDate: "2002",
         developer: "XboxDevTeam",

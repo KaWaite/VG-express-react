@@ -28,12 +28,12 @@ export default function TopList({ games, console }) {
         }
       >
         {games.map(game => (
-          <>
+          <div key={game.id}>
             <Divider component="li" />
-            <ListItem key={game.id} button>
+            <ListItem button>
               <ListItemText primary={game.title} secondary={game.score} />
             </ListItem>
-          </>
+          </div>
         ))}
       </List>
     </Grid>
