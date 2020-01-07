@@ -25,12 +25,12 @@ export default function TopRated() {
         <Grid item xs={12} sm={4}>
           <TopList />
         </Grid>
-        <Grid item xs={12} sm={4}>
+        {/* <Grid item xs={12} sm={4}>
           <TopList />
         </Grid>
         <Grid item xs={12} sm={4}>
           <TopList />
-        </Grid>
+        </Grid> */}
       </Grid>
     </div>
   );

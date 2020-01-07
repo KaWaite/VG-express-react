@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 export default function List() {
-  useEffect(() => {
-    fetchItems();
-  }, []);
+  // useEffect(() => {
+  //   fetchItems();
+  // }, []);
 
-  const fetchItems = async () => {
-    const data = await fetch("https://api-v3.igdb.com");
-    console.log(data);
-  };
+  // const fetchItems = async () => {
+  //   const data = await fetch("https://api-v3.igdb.com");
+  //   console.log(data);
+  // };
 
   return (
     <div>
