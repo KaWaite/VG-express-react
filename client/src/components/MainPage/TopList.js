@@ -7,6 +7,8 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Divider from "@material-ui/core/Divider";
 import ListSubheader from "@material-ui/core/ListSubheader";
 
+import { Link } from "react-router-dom";
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
@@ -23,7 +25,7 @@ export default function TopList({ games, console }) {
         className={classes.root}
         subheader={
           <ListSubheader component="div" id="nested-list-subheader">
-            {console}
+            <Link to={`/games/${console}`}>{console}</Link>
           </ListSubheader>
         }
       >

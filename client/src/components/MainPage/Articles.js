@@ -9,11 +9,11 @@ import Grid from "@material-ui/core/Grid";
 // import GridListTile from '@material-ui/core/GridListTile';
 
 // Images
-import MainImage from "../Images/the_last_of_us_2.jpg";
-import image2 from "../Images/Cp2077.jpg";
-import image3 from "../Images/Ds.jpg";
-import image4 from "../Images/ffviiR.jpg";
-import image5 from "../Images/Re2R.jpg";
+import MainImage from "../../Images/the_last_of_us_2.jpg";
+import image2 from "../../Images/Cp2077.jpg";
+import image3 from "../../Images/Ds.jpg";
+import image4 from "../../Images/ffviiR.jpg";
+import image5 from "../../Images/Re2R.jpg";
 
 const useStyles = makeStyles(theme => ({
   root: {

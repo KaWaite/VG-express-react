@@ -46,7 +46,7 @@ export default function TopRated() {
       <Grid container spacing={3}>
         <TopList games={PS4} console="PS4" />
         <TopList games={Switch} console="Switch" />
-        <TopList games={XboxOne} console="Xbox One" />
+        <TopList games={XboxOne} console="XboxOne" />
       </Grid>
     </div>
   );

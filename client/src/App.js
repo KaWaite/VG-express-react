@@ -3,10 +3,13 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Components
-import NavBar from "./components/NavBar.js";
+import NavBar from "./components/persistentUI/NavBar";
 import Template from "./components/template/Template";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+import Main from "./components/MainPage/Main";
+import MainPS4 from "./components/ConsolePages/MainPS4";
+import MainSwitch from "./components/ConsolePages/MainSwitch";
+import MainXboxOne from "./components/ConsolePages/MainXboxOne";
+import Footer from "./components/persistentUI/Footer";
 
 // Experimental components
 import About from "./components/Routes practice/About";
@@ -21,6 +24,15 @@ function App() {
           <Switch>
             {/* main route */}
             <Route exact path="/" component={Main} />
+
+            {/* PS4 game page */}
+            <Route path="/games/PS4" component={MainPS4} />
+
+            {/* Switch game page */}
+            <Route path="/games/Switch" component={MainSwitch} />
+
+            {/* XboxOne game page */}
+            <Route path="/games/XboxOne" component={MainXboxOne} />
 
             {/* About path */}
             <Route path="/about" component={About} />
