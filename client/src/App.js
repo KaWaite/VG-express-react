@@ -27,18 +27,19 @@ function App() {
             <Route exact path="/" component={Main} />
 
             {/* ************* CONSOLE ROUTES(TOP) ************* */}
-            {/* PS4 game page */}
+            {/* PS4 games page */}
             <Route exact path="/games/PS4" component={MainPS4} />
 
-            {/* Switch game page */}
+            {/* Switch games page */}
             <Route exact path="/games/Switch" component={MainSwitch} />
 
-            {/* XboxOne game page */}
+            {/* XboxOne games page */}
             <Route exact path="/games/XboxOne" component={MainXboxOne} />
             {/* ************* CONSOLE ROUTES(BOTTOM) ************* */}
 
-            {/* general page route */}
-            <Route path="/games/PS4/:game" component={Game} />
+            {/* game details route */}
+            <Route path="/games/:console/:game" component={Game} />
+
             {/* ROUTES I MIGHT NOT USE */}
             {/* About path */}
             <Route path="/about" component={About} />
