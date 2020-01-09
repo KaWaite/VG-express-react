@@ -9,6 +9,7 @@ import Main from "./components/MainPage/Main";
 import MainPS4 from "./components/ConsolePages/MainPS4";
 import MainSwitch from "./components/ConsolePages/MainSwitch";
 import MainXboxOne from "./components/ConsolePages/MainXboxOne";
+import Game from "./components/Game";
 import Footer from "./components/persistentUI/Footer";
 
 // Experimental components
@@ -25,15 +26,20 @@ function App() {
             {/* main route */}
             <Route exact path="/" component={Main} />
 
+            {/* ************* CONSOLE ROUTES(TOP) ************* */}
             {/* PS4 game page */}
-            <Route path="/games/PS4" component={MainPS4} />
+            <Route exact path="/games/PS4" component={MainPS4} />
 
             {/* Switch game page */}
-            <Route path="/games/Switch" component={MainSwitch} />
+            <Route exact path="/games/Switch" component={MainSwitch} />
 
             {/* XboxOne game page */}
-            <Route path="/games/XboxOne" component={MainXboxOne} />
+            <Route exact path="/games/XboxOne" component={MainXboxOne} />
+            {/* ************* CONSOLE ROUTES(BOTTOM) ************* */}
 
+            {/* general page route */}
+            <Route path="/games/PS4/:game" component={Game} />
+            {/* ROUTES I MIGHT NOT USE */}
             {/* About path */}
             <Route path="/about" component={About} />
 

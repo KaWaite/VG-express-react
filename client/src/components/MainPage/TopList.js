@@ -13,6 +13,10 @@ const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
     padding: "0 20px"
+  },
+  link: {
+    color: "black",
+    textDecoration: "none"
   }
 }));
 
@@ -25,16 +29,23 @@ export default function TopList({ games, console }) {
         className={classes.root}
         subheader={
           <ListSubheader component="div" id="nested-list-subheader">
-            <Link to={`/games/${console}`}>{console}</Link>
+            <Link className={classes.link} to={`/games/${console}`}>
+              {console}
+            </Link>
           </ListSubheader>
         }
       >
         {games.map(game => (
           <div key={game.id}>
             <Divider component="li" />
-            <ListItem button>
-              <ListItemText primary={game.title} secondary={game.score} />
-            </ListItem>
+            <Link
+              className={classes.link}
+              to={`/games/${console}/${game.title}`}
+            >
+              <ListItem button>
+                <ListItemText primary={game.title} secondary={game.score} />
+              </ListItem>
+            </Link>
           </div>
         ))}
       </List>
