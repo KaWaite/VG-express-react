@@ -8,25 +8,35 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
-import image from "../Images/bloodborne.jpg";
+import Bloodborne from "../Images/bloodborne.jpg";
+import DeathStranding from "../Images/DeathStranding.jpg";
+import FFX from "../Images/finalfantasyX.jpg";
 
 const useStyles = makeStyles({
   card: {
     // maxWidth:
   },
   media: {
-    height: "50vh"
+    height: "50vh",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "cover"
+  },
+  desc: {
+    whiteSpace: "pre-wrap"
   }
 });
 
 export default function Game({ match }) {
-  // Fetch game from Server.js
+  // set classes for styles
+  const classes = useStyles();
+
+  // Fetch game from Server.js and create state
+  const [game, setGame] = useState([]);
+
   useEffect(() => {
     fetchGame();
-    console.log(match.url);
   }, []);
-
-  const [game, setGame] = useState([]);
 
   const fetchGame = async () => {
     const fetchItem = await fetch(`/api/games`);
@@ -59,23 +69,32 @@ export default function Game({ match }) {
     const game = getGame(games);
     setGame(game);
   };
-  const classes = useStyles();
 
   return (
     <Card className={classes.card}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={image}
-          title="Bloodborne hunter"
+          image={
+            game.title === "Bloodborne"
+              ? Bloodborne
+              : game.title === "Death Stranding"
+              ? DeathStranding
+              : FFX
+          }
+          title={game.title}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h3" component="h2">
             {game.title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+          <Typography
+            variant="body2"
+            className={classes.desc}
+            color="textSecondary"
+            component="p"
+          >
+            {game.desc}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -89,13 +108,4 @@ export default function Game({ match }) {
       </CardActions>
     </Card>
   );
-
-  // return (
-  //   <div>
-  //     <h1>{game.title} PAGE!!!</h1>
-  //     <h5>{game.releaseDate}</h5>
-  //     <h5>{game.score} </h5>
-  //     <h5>{game.genre} </h5>
-  //   </div>
-  // );
 }
