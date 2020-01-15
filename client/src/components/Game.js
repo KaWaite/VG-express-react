@@ -32,7 +32,7 @@ export default function Game({ match }) {
   const classes = useStyles();
 
   // Fetch game from Server.js and create state
-  const [game, setGame] = useState([]);
+  const [game, setGame] = useState({});
 
   useEffect(() => {
     fetchGame();
@@ -46,6 +46,9 @@ export default function Game({ match }) {
     const getGame = games => {
       const splitURL = match.url.split("/");
       const gameConsole = splitURL[2];
+
+      // Wanted to shorten this conditional bought couldn't find a way
+      // (tried for...in with concatenation but became string of variable name, not variable)
       if (gameConsole === "PS4") {
         for (let i = 0; i < games.PS4.length; i++) {
           if (games.PS4[i].title === match.params.game) {
